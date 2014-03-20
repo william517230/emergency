@@ -1,0 +1,13 @@
+<script type="text/javascript" src="js/user/user_personal_edit_window.js"></script>
+<script type="text/javascript" src="js/user/user_passwore_change_window.js"></script>
+<script type="text/javascript" src="js/user/user_index_top.js"></script>
+<script type="text/javascript" src="js/user/user_index.js"></script>
+<script type="text/javascript" src="js/user/user_menu.js"></script>
+<script type="text/javascript" src="js/user/user_add_formpanel.js"></script>
+<script type="text/javascript" src="js/user/user_add_window.js"></script>
+<script type="text/javascript" src="js/user/user_edit_window.js"></script>
+<script type="text/javascript" src="js/user/user_gridpanel.js"></script>
+<script type="text/javascript" src="js/user/role_assign_window.js"></script>
+<script type="text/javascript" src="js/user/role_assign_formpanel.js"></script>
+<script type="text/javascript" src="js/user/department_assign_window.js"></script>
+<script type="text/javascript" src="js/user/department_assign_treepanel.js"></script>

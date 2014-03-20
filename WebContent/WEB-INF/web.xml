@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+	<!-- Filter -->
+	<!-- 全局URLFilter -->
+	<filter>
+		<filter-name>urlFilter</filter-name>
+		<filter-class>com.modelsystem.filter.UrlFilter</filter-class>
+		<!-- 认证器authority -->
+		<!--<init-param>
+			<param-name>authority</param-name>
+			<param-value>net.yeah.zhanwenzhao.filter.authority.MyCacheAuthority</param-value>
+		</init-param>-->
+		<!--
+			<init-param> <param-name>authority</param-name>
+			<param-value>net.yeah.zhanwenzhao.filter.authority.MyAuthority</param-value>
+			</init-param>
+		-->
+		<!-- servlet suffix -->
+		<init-param>
+			<param-name>servletSuffix;actionSuffix</param-name>
+			<param-value>.html;.action</param-value>
+		</init-param>
+		<init-param>
+			<param-name>exceptUrl</param-name>
+			<param-value>/user_login.jsp,/user!login.action</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>urlFilter</filter-name>
+		<url-pattern>/pages/*</url-pattern>
+		<url-pattern>*.html</url-pattern>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext-*.xml</param-value>
+	</context-param>
+	<filter>
+		<filter-name>openSessionInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>openSessionInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+	<welcome-file-list>
+		<welcome-file>/user_login.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,7 @@
+﻿.iconFirst{
+ background-image:url(/easycall/images/logo.jpg);background-repeat:no-repeat;}
+/*CSS*/
+.con{ text-align:left; width:500px; height:400px; margin:0px auto; padding:100px 50px;
+background:rgba(255, 255, 255, 0.8) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/
+filter:Alpha(opacity=80); background:#fff;/*实现IE背景透明*/}
+ 

@@ -1,0 +1,19 @@
+##\u6570\u636e\u5e93\u914d\u7f6e
+#\u6570\u636e\u5e93\u7c7b\u578b SqlServer|MySql|Oracle
+jdbc.database.type = MySql
+#\u751f\u6210\u8868\u7b56\u7565 create|update
+jdbc.hibernate.hbm2ddl.auto = update
+#\u663e\u793a\u6570\u636e\u5e93\u5b58\u53d6sql\u8bed\u53e5 true|false
+jdbc.hibernate.show_sql = true 
+#\u683c\u5f0f\u5316\u6570\u636e\u5e93\u7684SQL\u8bed\u53e5\u663e\u793a true|false
+jdbc.formate_sql = false
+#\u6307\u5b9a\u6620\u5c04\u6587\u4ef6\u7684\u5305\u540d,\u4ee5\u6b64\u65b9\u5f0f\u52a0\u8f7dhibernate\u7684jpa\u6ce8\u89e3\u5f62\u5f0f\u7684\u5b9e\u4f53\u7c7b\uff0c\u51cf\u5c11\u914d\u7f6e\u91cf
+jdbc.persistentobject.packagesToScan = com.modelsystem.po
+
+##MySQL
+jdbc.driverClassName = com.mysql.jdbc.Driver
+jdbc.dialect = org.hibernate.dialect.MySQL5Dialect
+jdbc.url = jdbc\:mysql\://localhost\:3306/emergency
+jdbc.username = root
+jdbc.password = 123456
+
